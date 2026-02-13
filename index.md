@@ -2,71 +2,91 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Battle-tested, scalable folder structures for React applications"
+description: "How I code - my structure templates, setup guides, and design patterns"
 permalink: /
 ---
 
-# React App Folder Structure Templates
+# How I Code
 {: .fs-9 }
 
-Battle-tested, scalable folder structures for React applications using feature-based architecture.
+A collection of my coding practices, folder structure templates, setup guides, and design patterns I use to build scalable applications.
 {: .fs-6 .fw-300 }
 
-[Get started now](#available-templates){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View on GitHub](https://github.com/ahmad2point0/react-app-folder-structure){: .btn .fs-5 .mb-4 .mb-md-0 }
+[View on GitHub](https://github.com/ahmad2point0/howicode){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
-## Why Feature-Based Architecture?
+## What's Inside
 
 {: .highlight }
-Feature-based architecture organizes code by business features rather than technical layers, making applications more scalable and maintainable.
+This site documents how I structure, set up, and architect my projects. It's a living reference that grows as I learn and build.
 
-- **🚀 Scalable** - Easy to add features without restructuring
-- **🧹 Maintainable** - Related code stays together
-- **👥 Team-friendly** - Clear ownership and reduced conflicts
-- **⚡ Efficient** - Faster development and better code splitting
+### Folder Structures
 
-## Available Templates
+Production-ready folder structures I use across different frameworks, all following feature-based architecture.
 
-| Framework | Status | Description | Documentation |
-|:----------|:-------|:------------|:--------------|
-| **React Native Expo** | ✅ Available | Mobile apps with Expo Router | [📱 View →](react-native-expo.html) |
-| **Next.js App Router** | 🚧 Coming Soon | Full-stack web apps with App Router | 🔜 |
-| **Vite + React** | 🚧 Coming Soon | Fast development with Vite | 🔜 |
-| **Create React App** | 🚧 Coming Soon | Traditional React SPA | 🔜 |
-| **React Native CLI** | 🚧 Coming Soon | Native development without Expo | 🔜 |
-| **Remix** | 🚧 Coming Soon | Full-stack with server rendering | 🔜 |
+| Template | Framework | Description |
+|:---------|:----------|:------------|
+| [React Native Expo](howicode/react-native-expo.html) | React Native | Mobile apps with Expo Router |
+| [Next.js App Router](howicode/nextjs.html) | Next.js | Full-stack web apps with App Router |
 
-## Core Structure Pattern
+### Coming Soon
 
-All templates follow this proven pattern:
+| Topic | Category | Status |
+|:------|:---------|:-------|
+| Vite + React Folder Structure | Folder Structures | Coming Soon |
+| Create React App Folder Structure | Folder Structures | Coming Soon |
+| React Native CLI Folder Structure | Folder Structures | Coming Soon |
+| Remix Folder Structure | Folder Structures | Coming Soon |
+
+---
+
+## Design Patterns I Follow
+
+### Feature-Based Architecture
+
+I organize code by business features rather than technical layers. This keeps related code together and makes projects easier to scale and maintain.
 
 ```
 src/
 ├── app/           # File-based routing (screens/pages)
 ├── features/      # Feature modules (auth, chat, etc.)
-├── components/    # Shared UI components
-├── assets/        # Static files
-├── constants/     # App constants
-├── lib/           # Third-party integrations
-├── store/         # Global state
-├── hooks/         # Global hooks
-├── utils/         # Helper functions
-├── types/         # TypeScript types
-├── service/       # Background services
-└── config/        # App configuration
+├── global/        # Shared components & services
 ```
 
-## Quick Start
+**Why this works:**
 
-1. Choose a template from the table above
-2. Click the link to view detailed documentation  
-3. Copy the folder structure to your project
-4. Follow the framework-specific setup guide
+- Related code stays together - components, hooks, services, and types for a feature live in the same folder
+- Features are self-contained and don't depend on each other
+- Pages/screens are thin wrappers that compose feature components
+- Shared code lives in a dedicated `global/` layer
+
+### Key Principles
+
+- **Screens are thin** - routing files only compose feature components, no business logic
+- **Features don't cross-import** - shared code goes in `global/`
+- **Barrel exports** - each feature exposes a public API via `index.ts`
+- **Types stay close** - feature types live inside the feature folder
+- **State separation** - Zustand for client state, React Query for server state
+
+---
+
+## Tech Stack
+
+Tools and libraries I commonly use across projects:
+
+| Category | Tools |
+|:---------|:------|
+| **Languages** | TypeScript, JavaScript |
+| **Mobile** | React Native, Expo, Expo Router |
+| **Web** | Next.js (App Router), React, Vite |
+| **State Management** | Zustand, React Query |
+| **Styling** | Tailwind CSS, StyleSheet (RN) |
+| **API** | Axios, Server Actions |
+| **Backend** | Supabase, Prisma |
 
 ---
 
 ## Contributing
 
-We welcome contributions! See our [Contributing Guide](contributing.html) for details on how to add new templates or improve existing ones.
+Want to suggest improvements or add new templates? See the [Contributing Guide](contributing.html).

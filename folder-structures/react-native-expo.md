@@ -1,7 +1,8 @@
 ---
 layout: default
 title: React Native Expo
-nav_order: 2
+parent: Folder Structures
+nav_order: 1
 ---
 
 # React Native Expo Folder Structure

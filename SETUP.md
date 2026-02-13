@@ -61,7 +61,7 @@ gem install bundler
 
 1. **Navigate to your project directory:**
    ```cmd
-   cd d:\Github\react-app-folder-structure
+   cd path/folder-structure
    ```
 
 2. **Install all gems from Gemfile:**

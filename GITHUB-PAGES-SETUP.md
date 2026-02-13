@@ -7,7 +7,7 @@ This guide will help you deploy your documentation to GitHub Pages automatically
 ### Step 1: Enable GitHub Pages
 
 1. **Go to your repository on GitHub:**
-   `https://github.com/ahmad2point0/react-app-folder-structure`
+   `https://github.com/ahmad2point0/howicode`
 
 2. **Navigate to Settings:**
    - Click the "Settings" tab in your repository
@@ -36,7 +36,7 @@ git push origin main
 2. **Watch the workflow run** - it takes about 2-3 minutes
 3. **Check the deployment** - your site will be live at:
    
-   **🌐 https://ahmad2point0.github.io/folder-structures/**
+   **🌐 https://ahmad2point0.github.io/howicode/**
 
 ## 🔧 What Happens Automatically
 
@@ -77,7 +77,7 @@ Gemfile                   # Ruby dependencies
 ```yaml
 # _config.yml key settings
 title: React App Folder Structure Templates
-baseurl: "/react-app-folder-structure"
+baseurl: "/howicode"
 url: "https://ahmad2point0.github.io"
 theme: just-the-docs
 ```
@@ -86,7 +86,7 @@ theme: just-the-docs
 
 After deployment, verify everything works:
 
-1. **Visit your site:** https://ahmad2point0.github.io/folder-structures/
+1. **Visit your site:** https://ahmad2point0.github.io/howicode/
 2. **Test navigation:** Click through different pages
 3. **Test search:** Use the search functionality
 4. **Check mobile:** View on mobile devices
@@ -117,10 +117,10 @@ After deployment, verify everything works:
 
 ```bash
 # Test the exact build process GitHub uses
-JEKYLL_ENV=production bundle exec jekyll build --baseurl "/react-app-folder-structure"
+JEKYLL_ENV=production bundle exec jekyll build --baseurl "/howicode"
 
 # Serve with the same baseurl
-bundle exec jekyll serve --baseurl "/react-app-folder-structure"
+bundle exec jekyll serve --baseurl "/howicode"
 ```
 
 ## 🔄 Workflow Triggers
@@ -186,4 +186,4 @@ The GitHub Actions workflow handles everything automatically! 🎉
 ---
 
 **🌐 Your documentation will be live at:**
-**https://ahmad2point0.github.io/folder-structures/**
+**https://ahmad2point0.github.io/howicode/**

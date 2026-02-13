@@ -7,7 +7,7 @@ nav_order: 3
 # Contributing Guide
 {: .no_toc }
 
-Help us expand this collection of React folder structure templates!
+Help expand this collection of coding guides and templates!
 {: .fs-6 .fw-300 }
 
 ## Table of contents
@@ -51,8 +51,8 @@ We use [Just the Docs](https://just-the-docs.github.io/just-the-docs/) for our d
 
 1. **Fork and clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/react-app-folder-structure.git
-   cd react-app-folder-structure
+   git clone https://github.com/yourusername/howicode.git
+   cd howicode
    ```
 
 2. **Install Jekyll and dependencies:**
