@@ -1,0 +1,406 @@
+/* ============================================================
+   Howicode — readability + visual polish for coders
+   Loaded automatically by just-the-docs via _sass/custom/custom.scss
+   ============================================================ */
+
+:root {
+  --hc-accent: #38bdf8;
+  --hc-accent-2: #a78bfa;
+  --hc-accent-3: #34d399;
+  --hc-bg: #0b1020;
+  --hc-surface: #0f1530;
+  --hc-surface-2: #121a3a;
+  --hc-border: #1e2a55;
+  --hc-text: #cbd5e1;
+  --hc-text-strong: #f8fafc;
+  --hc-muted: #94a3b8;
+}
+
+/* Typography tuning for long-form reading */
+.main-content {
+  font-size: 15.5px;
+  line-height: 1.72;
+  letter-spacing: 0.005em;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+.main-content h1 { margin-top: 0.2em; }
+.main-content h2 {
+  margin-top: 2.2em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid var(--hc-border);
+}
+
+.main-content p,
+.main-content li {
+  color: var(--hc-text);
+}
+
+/* Inline code */
+.main-content code {
+  background: rgba(56, 189, 248, 0.10);
+  color: #e0f2fe;
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  padding: 1px 6px;
+  border-radius: 5px;
+  font-size: 0.88em;
+}
+
+/* Code blocks - cleaner, with subtle gradient border */
+.main-content pre.highlight,
+.main-content figure.highlight {
+  background: #0a1128 !important;
+  border: 1px solid var(--hc-border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 4px 18px -10px rgba(0,0,0,0.6);
+  overflow-x: auto;
+}
+
+.main-content pre.highlight code,
+.main-content figure.highlight code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #e2e8f0;
+}
+
+/* Tables — cards-y, breathable */
+.main-content table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--hc-border);
+}
+
+.main-content th {
+  background: var(--hc-surface-2);
+  color: var(--hc-text-strong);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.main-content tbody tr:hover {
+  background: rgba(56, 189, 248, 0.04);
+}
+
+/* Highlight callout */
+.main-content blockquote,
+.main-content .highlight-block {
+  border-left: 3px solid var(--hc-accent);
+  background: rgba(56, 189, 248, 0.06);
+  padding: 12px 16px;
+  border-radius: 0 10px 10px 0;
+  color: var(--hc-text);
+}
+
+/* Links */
+.main-content a:not(.btn) {
+  color: var(--hc-accent);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(56, 189, 248, 0.4);
+  transition: color 0.15s, border-color 0.15s;
+}
+.main-content a:not(.btn):hover {
+  color: #bae6fd;
+  border-bottom-color: #bae6fd;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+  border: 0;
+  color: #fff !important;
+  box-shadow: 0 8px 24px -10px rgba(99, 102, 241, 0.6);
+}
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* Sidebar polish */
+.side-bar {
+  border-right: 1px solid var(--hc-border);
+}
+
+/* ============================================================
+   Site title — "How I Code" wordmark + code-icon logo
+   The text in the markup stays "How I Code" for a11y / SEO.
+   We render an icon via ::before and style the text per theme.
+   ============================================================ */
+.site-title.lbl-toggle,
+.site-title {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+  padding: 18px 0 18px 0 !important;
+  text-transform: none !important;
+  color: var(--hc-text-strong) !important;
+  -webkit-text-fill-color: var(--hc-text-strong) !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  border-bottom: 0 !important;
+  text-decoration: none !important;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.site-title::before {
+  content: "";
+  display: inline-block;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f8fafc' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><polyline points='8,8 4,12 8,16'/><polyline points='16,8 20,12 16,16'/><line x1='14' y1='6' x2='10' y2='18'/></svg>"),
+    linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+  background-position: center, center;
+  background-size: 22px 22px, cover;
+  background-repeat: no-repeat, no-repeat;
+  box-shadow: 0 6px 18px -8px rgba(99, 102, 241, 0.7);
+}
+
+.site-title:hover {
+  color: #bae6fd !important;
+  -webkit-text-fill-color: #bae6fd !important;
+  transform: translateX(1px);
+}
+
+
+/* Hero card on home page */
+.hc-hero {
+  padding: 28px 28px 24px;
+  margin: -8px 0 28px;
+  border-radius: 14px;
+  background:
+    radial-gradient(900px circle at 0% 0%, rgba(56, 189, 248, 0.12), transparent 40%),
+    radial-gradient(700px circle at 100% 0%, rgba(167, 139, 250, 0.12), transparent 40%),
+    var(--hc-surface);
+  border: 1px solid var(--hc-border);
+}
+
+.hc-hero h1 {
+  font-size: 2.4em;
+  margin: 0 0 0.2em;
+  background: linear-gradient(135deg, #f8fafc 0%, #93c5fd 60%, #c4b5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hc-hero .hc-tagline {
+  font-size: 1.1em;
+  color: var(--hc-muted);
+  margin-bottom: 1em;
+}
+
+.hc-hero .hc-meta {
+  font-size: 0.9em;
+  color: var(--hc-muted);
+}
+
+/* Pill chips for tech stack */
+.hc-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 4px;
+}
+
+.hc-chip {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #bae6fd;
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+.hc-chip.purple {
+  background: rgba(167, 139, 250, 0.08);
+  border-color: rgba(167, 139, 250, 0.25);
+  color: #ddd6fe;
+}
+
+.hc-chip.green {
+  background: rgba(52, 211, 153, 0.08);
+  border-color: rgba(52, 211, 153, 0.25);
+  color: #a7f3d0;
+}
+
+.hc-chip.amber {
+  background: rgba(251, 191, 36, 0.08);
+  border-color: rgba(251, 191, 36, 0.25);
+  color: #fde68a;
+}
+
+/* Card grid */
+.hc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 16px 0 8px;
+}
+
+.hc-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: var(--hc-surface);
+  border: 1px solid var(--hc-border);
+  transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--hc-border) !important; /* override link underline */
+  color: inherit !important;
+}
+
+.hc-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.5) !important;
+  box-shadow: 0 10px 28px -16px rgba(56, 189, 248, 0.4);
+}
+
+.hc-card .hc-card-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--hc-accent);
+  font-weight: 700;
+  margin: 0 0 10px;
+  padding: 3px 9px;
+  background: rgba(56, 189, 248, 0.10);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 999px;
+}
+
+.hc-card h3,
+.hc-card .hc-card-title {
+  display: block;
+  margin: 0 0 8px;
+  font-size: 1.08em;
+  font-weight: 700;
+  color: var(--hc-text-strong) !important;
+  letter-spacing: -0.005em;
+  line-height: 1.35;
+}
+
+.hc-card p {
+  margin: 0;
+  font-size: 0.92em;
+  color: var(--hc-muted);
+  line-height: 1.6;
+}
+
+/* Section divider with label */
+.hc-section-label {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--hc-accent);
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.4em;
+}
+
+/* Anchor links on headings nicer */
+.main-content h2 .anchor-heading,
+.main-content h3 .anchor-heading {
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.main-content h2:hover .anchor-heading,
+.main-content h3:hover .anchor-heading {
+  opacity: 1;
+}
+
+/* Reading-friendly max width on home */
+.hc-narrow {
+  max-width: 920px;
+}
+
+/* ============================================================
+   Rouge syntax highlighting — readable on dark background
+   Custom palette (similar to One Dark / Night Owl)
+   ============================================================ */
+.highlight,
+.highlight pre,
+figure.highlight,
+figure.highlight pre {
+  background: #0a1128 !important;
+  color: #e2e8f0 !important;
+}
+
+.highlight {
+  // Comments — muted gray-blue, italic
+  .c, .c1, .cm, .cp, .cs { color: #64748b !important; font-style: italic; }
+
+  // Keywords (const, let, function, if, return, import, export, …)
+  .k, .kc, .kd, .kn, .kp, .kr, .kt { color: #c084fc !important; font-weight: 500; }
+
+  // Storage / modifiers
+  .kn { color: #c084fc !important; }
+
+  // Strings
+  .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .sr, .ss {
+    color: #86efac !important;
+  }
+  .se { color: #fde68a !important; }   // escape sequences
+
+  // Numbers, booleans
+  .m, .mb, .mf, .mh, .mi, .mo, .mx, .il { color: #fbbf24 !important; }
+
+  // Functions
+  .nf, .fm { color: #7dd3fc !important; }
+
+  // Built-ins / classes
+  .nc, .nn, .ne, .nt, .bp { color: #5eead4 !important; }
+
+  // Variables / identifiers (default text)
+  .n, .nv, .nx, .vc, .vg, .vi { color: #e2e8f0 !important; }
+
+  // Operators, punctuation
+  .o, .ow, .p { color: #94a3b8 !important; }
+
+  // Attributes / properties (JSX, JSON keys)
+  .na, .py { color: #f0abfc !important; }
+
+  // Tags (HTML/JSX)
+  .nt { color: #f87171 !important; }
+
+  // Errors
+  .err { color: #fca5a5 !important; background: transparent !important; }
+
+  // Highlighted lines
+  .hll { background: rgba(56, 189, 248, 0.08) !important; }
+
+  // Diff
+  .gd { color: #fca5a5 !important; }
+  .gi { color: #86efac !important; }
+}
+
+/* Inline code that contains links — keep underline subtle */
+.hc-card code {
+  background: rgba(56, 189, 248, 0.10);
+}
