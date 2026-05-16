@@ -6,7 +6,7 @@ url: "http://howicode.ahmad2point0.com/"
 
 # Theme
 theme: just-the-docs
-color_scheme: dark
+color_scheme: howicode
 
 # Search
 search_enabled: true
@@ -22,12 +22,18 @@ search:
 # Navigation
 nav_sort: case_insensitive
 nav_external_links:
+- title: Personal site
+  url: https://ahmad2point0.com
+  hide_icon: false
+- title: Medium
+  url: https://ahmad2point0.medium.com
+  hide_icon: false
 - title: GitHub
   url: https://github.com/ahmad2point0
   hide_icon: false
 
 # Footer
-footer_content: "How I Code is maintained by <a href=\"https://github.com/ahmad2point0\">ahmad2point0</a>."
+footer_content: "How I Code is maintained by <a href=\"https://ahmad2point0.com\">Muhammad Ahmad Arshad</a> — find me on <a href=\"https://github.com/ahmad2point0\">GitHub</a>."
 
 # Back to top link
 back_to_top: true
